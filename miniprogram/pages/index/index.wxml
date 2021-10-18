@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view class="userinfo-avater">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>，早上好！
+  </view>
+  <view class="clockcontainer">
+    <block wx:for="{{worklist}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class="clockbar {{bgclasslist[idx % 3]}}">
+        <view class="clockname textcenter">{{itemName}}</view>
+        <view class="clockbarright">
+          <view class="clockstart textcenter {{textclasslist[idx % 3]}}">开始</view>
+        </view>
+      </view>
+    </block>
+    <!--
+    <view class="clockbar bgorange">
+      <view class="clockname textcenter">运动</view>
+      <view class="clockbarright">
+        <view class="clockstart textcenter textorange">开始</view>
+      </view>
+    </view>
+    <view class="clockbar bgrose">
+      <view class="clockname textcenter">学习</view>
+      <view class="clockbarright">
+        <view class="clockstart textcenter textrose">开始</view>
+      </view>
+    </view>
+    <view class="clockbar bggreen">
+      <view class="clockname textcenter">娱乐</view>
+      <view class="clockbarright">
+        <view class="clockstart textcenter textgreen">开始</view>
+      </view>
+    </view>
+    -->
+  </view>
+</view>

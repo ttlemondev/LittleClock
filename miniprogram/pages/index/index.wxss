@@ -1,0 +1,79 @@
+/**index.wxss**/
+
+page {
+  padding-top: 54rpx;
+  background-color: rgb(251, 180, 224);
+  padding-bottom: 60rpx;
+}
+.userinfo {
+  width: 100%;
+  padding-left: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.userinfo-avater {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+.clockcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150rpx;
+}
+
+.clockbar {
+  width: 500rpx;
+  height: 2rem;
+  margin: 1rem 0;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.clockname {
+  color: #ffffff;
+  height: 100%;
+  margin: 0 20rpx;
+}
+.clockbarright {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.clockstart {
+  background-color: #ffffff;
+  padding: 0 20rpx;
+  height: 100%;
+  border-radius: 0 50rpx 50rpx 0;
+}
+.textcenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bgorange {
+  background-color: #ee6002;
+}
+.textorange {
+  color: #ee6002;
+}
+.bgrose {
+  background-color: #ee0290;
+}
+.textrose {
+  color: #ee0290;
+}
+.bggreen {
+  background-color: #09af00;
+}
+.textgreen {
+  color: #09af00;
+}
