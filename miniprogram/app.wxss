@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  height: 100%;
 } 
 
 button {
@@ -23,4 +24,66 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  background-color: rgb(251, 180, 224);
+  padding-bottom: 60rpx;
+  height: 100%;
+  overflow: hidden;
+}
+
+.userinfo {
+  padding-top: 54rpx;
+  width: 100%;
+  padding-left: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.userinfo-avater {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.bodycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150rpx;
+  margin-bottom: 150rpx;
+  overflow-y: scroll;
+  flex: 1;
+}
+
+.bgorange {
+  background-color: #ee6002;
+}
+.textorange {
+  color: #ee6002;
+}
+.bgorange600 {
+  background-color: #fb8c00;
+}
+.textorange600 {
+  color: #fb8c00;
+}
+.bgrose {
+  background-color: #ee0290;
+}
+.textrose {
+  color: #ee0290;
+}
+.bggreen {
+  background-color: #09af00;
+}
+.textgreen {
+  color: #09af00;
+}
+.bgblue {
+  background-color: #021aee;
+}
+.textblue {
+  color: #021aee;
 }

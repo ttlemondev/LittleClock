@@ -1,14 +1,35 @@
 {
-  "pages": [
-    "pages/index/index"
-  ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "小小计时器",
-    "navigationBarTextStyle": "black"
-  },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+    "pages": [
+        "pages/index/index",
+        "pages/setting/setting",
+        "pages/statistics/statistics"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "小小计时器",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "#00B26A",
+        "backgroundColor": "#FFFFFF",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "计时"
+            },
+            {
+                "pagePath": "pages/statistics/statistics",
+                "text": "统计"
+            },
+            {
+                "pagePath": "pages/setting/setting",
+                "text": "设置"
+            }
+        ]
+    }
 }

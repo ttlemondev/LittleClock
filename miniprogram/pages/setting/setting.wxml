@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="userinfo">
+    <view class="userinfo-avater">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>，早上好！
+  </view>
+  <view class="bodycontainer tablestyle">
+    <view class="bar firstbar">计时项目编辑</view>
+    <block wx:for="{{worklist}}" wx:key="*this" wx:for-index="idx" wx:for-item="item">
+      <block wx:if="{{item.available == true}}">
+        <view class="bar">
+          <view class="barbody">
+              <input value="{{item.workname}}" placeholder="学习" ></input>
+          </view>
+          <view class="barbutton textblue">
+              <view data-workid="{{item.workid}}">编辑</view>
+          </view>
+          <view class="barbutton textrose">
+              <view data-workid="{{item.workid}}" bindtap="onDeleteWork">删除</view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

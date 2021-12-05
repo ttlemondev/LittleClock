@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="userinfo">
+    <view class="userinfo-avater">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>，早上好！
+  </view>
+  <view class="bodycontainer tablestyle">
+    <view class="title">最近一周时间统计</view>
+    <block wx:for="{{worklist}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+        <block wx:if="{{itemName != '##DELETE##'}}">
+            <view class="clockbar {{bgclasslist[idx % 3]}}">
+            <view class="clockname textcenter">{{itemName}}</view>
+            <view class="clockbarright">
+                <view class="clockstart textcenter {{textclasslist[idx % 3]}}" style="width: {{100 - workpencent[idx]}}%"></view>
+            </view>
+            </view>
+        </block>
+    </block>
+  </view>
+</view>

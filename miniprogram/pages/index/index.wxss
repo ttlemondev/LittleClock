@@ -1,30 +1,13 @@
 /**index.wxss**/
 
 page {
-  padding-top: 54rpx;
-  background-color: rgb(251, 180, 224);
+  /**background-color: rgb(251, 180, 224);**/
+  background-color: rgb(238, 225, 217);
   padding-bottom: 60rpx;
-}
-.userinfo {
-  width: 100%;
-  padding-left: 50rpx;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.userinfo-avater {
-  border-radius: 50%;
+  height: 100%;
   overflow: hidden;
-  height: 2rem;
-  width: 2rem;
-  margin-right: 0.5rem;
 }
-.clockcontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 150rpx;
-}
+
 
 .clockbar {
   width: 500rpx;
@@ -58,22 +41,11 @@ page {
   flex-direction: row;
   align-items: center;
 }
-
-.bgorange {
-  background-color: #ee6002;
+.stopworkcontainer {
+  margin-bottom: 100rpx;
 }
-.textorange {
-  color: #ee6002;
-}
-.bgrose {
-  background-color: #ee0290;
-}
-.textrose {
-  color: #ee0290;
-}
-.bggreen {
-  background-color: #09af00;
-}
-.textgreen {
-  color: #09af00;
+.stopworkbutton {
+  border: white 1px solid;
+  border-radius: 10rpx;
+  padding: 10rpx 40rpx;
 }

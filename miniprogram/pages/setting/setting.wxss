@@ -1,0 +1,27 @@
+/* pages/setting/setting.wxss */
+
+.tablestyle {
+    background-color: #ffffff;
+    width: 90%;
+    overflow-x: hidden;
+}
+
+.bar {
+    width: 650rpx;
+    border-top: solid 1px #e0e0e0;
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem 0 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    align-items: center;
+}
+.barbody {
+    flex: 1;
+}
+.barbutton {
+    padding: 0 0.5rem 0 0.5rem;
+}
+.firstbar {
+    border-bottom: solid 1.5px #616161;
+}

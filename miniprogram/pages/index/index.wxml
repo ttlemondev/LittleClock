@@ -6,34 +6,48 @@
     </view>
     <open-data type="userNickName"></open-data>，早上好！
   </view>
-  <view class="clockcontainer">
-    <block wx:for="{{worklist}}" wx:for-index="idx" wx:for-item="itemName">
-      <view class="clockbar {{bgclasslist[idx % 3]}}">
-        <view class="clockname textcenter">{{itemName}}</view>
+  <block wx:if="{{onWork == false}}">
+    <view class="bodycontainer">
+      <block wx:for="{{worklist}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+        <block wx:if="{{itemName != '##DELETE##'}}">
+          <view class="clockbar {{bgclasslist[idx % colorsum]}}">
+            <view class="clockname textcenter">{{itemName}}</view>
+            <view class="clockbarright">
+              <view class="clockstart textcenter {{textclasslist[idx % colorsum]}}" data-workid="{{idx}}" bindtap="onStartWork">开始</view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <!--
+      <view class="clockbar bgorange">
+        <view class="clockname textcenter">运动</view>
         <view class="clockbarright">
-          <view class="clockstart textcenter {{textclasslist[idx % 3]}}">开始</view>
+          <view class="clockstart textcenter textorange">开始</view>
         </view>
       </view>
-    </block>
-    <!--
-    <view class="clockbar bgorange">
-      <view class="clockname textcenter">运动</view>
-      <view class="clockbarright">
-        <view class="clockstart textcenter textorange">开始</view>
+      <view class="clockbar bgrose">
+        <view class="clockname textcenter">学习</view>
+        <view class="clockbarright">
+          <view class="clockstart textcenter textrose">开始</view>
+        </view>
       </view>
-    </view>
-    <view class="clockbar bgrose">
-      <view class="clockname textcenter">学习</view>
-      <view class="clockbarright">
-        <view class="clockstart textcenter textrose">开始</view>
+      <view class="clockbar bggreen">
+        <view class="clockname textcenter">娱乐</view>
+        <view class="clockbarright">
+          <view class="clockstart textcenter textgreen">开始</view>
+        </view>
       </view>
+      -->
     </view>
-    <view class="clockbar bggreen">
-      <view class="clockname textcenter">娱乐</view>
-      <view class="clockbarright">
-        <view class="clockstart textcenter textgreen">开始</view>
-      </view>
+  </block>
+  <block wx:else>
+    <view class="bodycontainer">
+      <view>正在进行：{{workname}}！</view>
+      <view>已经过：{{elapsedTime.hour}} 时 {{elapsedTime.minute}} 分 {{elapsedTime.second}} 秒</view>
     </view>
-    -->
-  </view>
+    <view class="stopworkcontainer">
+      <view class="stopworkbutton bgorange600" bindtap="onStopWork">结束</view>
+    </view>
+  </block>
+  
 </view>
